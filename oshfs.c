@@ -168,6 +168,7 @@ static my_bid_t rmv_block(my_bid_t bid, MODE_T MODE){
             break;
         }
     }
+    mem_state->used_space -= blocksize;
 }
 static void *oshfs_init(struct fuse_conn_info *conn){
     printf("init\n");
