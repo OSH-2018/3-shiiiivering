@@ -450,7 +450,7 @@ static int oshfs_read(const char *path, char *buf, size_t size, off_t offset, st
     else if(block_offset > bid_offset){
         for(;block_offset > bid_offset; block_offset--){
             block_id = mark_blocks[block_id].pre_bid;
-            if(block_id = node_bid)return -ENOENT;
+            if(block_id == node_bid)return -ENOENT;
         }
     }
     while(size){
