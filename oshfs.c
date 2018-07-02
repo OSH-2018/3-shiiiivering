@@ -325,7 +325,7 @@ static int oshfs_write(const char *path, const char *buf, size_t size, off_t off
     else if(block_offset > bid_offset){
         for(;block_offset > bid_offset; block_offset--){
             block_id = mark_blocks[block_id].pre_bid;
-            if(block_id = node_bid)return -ENOENT;
+            if(block_id == node_bid)return -ENOENT;
         }
     }
     printf("found the first block to write bid = %lld\n", block_id);
